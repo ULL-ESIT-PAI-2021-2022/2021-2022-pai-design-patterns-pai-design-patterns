@@ -16,11 +16,24 @@
 
 import Cart from 'new_code.js';
 
+/**
+ * The Adapter class
+ */
 class CartAdapter {
+  /**
+   * Creates an object of the new cart class
+   */
   constructor() {
     this.cart = new Cart();
   }
 
+  /**
+   * Calculates the operation given with the two numbers
+   * @param {number} price 
+   * @param {number} item 
+   * @param {string} operation 
+   * @return {number} the result of the operation
+   */
   operation(price, item, operation) {
     switch(operation) {
       case 'add':

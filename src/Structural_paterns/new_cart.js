@@ -14,15 +14,36 @@
 
 'use strict';
 
+/**
+ * A cart class that has a few mathematical operations
+ */
 class Cart {
+  /**
+   * Adds two numbers and return the result
+   * @param {number} price 
+   * @param {number} item 
+   * @return {number} the result
+   */
   add(price, item) {
     return price + item;
   }
 
+  /**
+   * Divides two numbers and return the result
+   * @param {number} price 
+   * @param {number} item 
+   * @return {number} the result
+   */
   div(price, item) {
     return price / item;
   }
 
+  /**
+   * Multiplies two numbers and return the result
+   * @param {number} price 
+   * @param {number} item 
+   * @return {number} the result
+   */
   mult(price, item) {
     return price * item;
   }

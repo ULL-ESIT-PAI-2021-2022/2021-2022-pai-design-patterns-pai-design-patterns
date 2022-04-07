@@ -17,6 +17,9 @@
 
 import Cart from 'original_code';
 
+/**
+ * This function exemplifies the use of the adapter pattern
+ */
 function main() {
   const myCart = new Cart();
   const multiplication = myCart.operation(1, 2, 'multiplication');

@@ -18,6 +18,9 @@
 import Cart from './new_cart';
 import CartAdapter from './adapter';
 
+/**
+ * This function exemplifies the use of the adapter pattern
+ */
 function main() {
   const myCartAdapter = new CartAdapter();
   const mySumAdapter = myCartAdapter.operation(2, 2, 'multiplication');

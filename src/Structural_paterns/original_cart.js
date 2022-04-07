@@ -14,7 +14,18 @@
 
 'use strict';
 
+/**
+ * The original cart class
+ */
 class Cart {
+  /**
+   * Given two numbers and an operation, returns the result of the given
+   * operation
+   * @param {number} price 
+   * @param {number} item 
+   * @param {string} theOperation 
+   * @return {number} the result
+   */
   operation(price, item, theOperation) {
     switch (theOperation) {
       case 'multiplication':
