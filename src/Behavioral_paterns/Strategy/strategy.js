@@ -9,6 +9,7 @@
  * @since Apr 07 2022
  * @desc This program exemplifies the strategy pattern for a shipping
  * 
+ * @see {@link https://github.com/PacktPublishing/TypeScript-4-Design-Patterns-and-Best-Practices/blob/main/chapters/chapter-5_Behavioral_Design_Patterns/Strategy.ts}
  * @see {@link https://github.com/ULL-ESIT-PAI-2021-2022/2021-2022-pai-design-patterns-pai-design-patterns}
  */
 
