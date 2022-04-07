@@ -12,7 +12,7 @@
  */
 
 /**
- * This function creates a new employee
+ * This function creates a new employees
  */
 const Factory = function() {
   this.createEmployee = function(type) {
