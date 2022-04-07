@@ -18,12 +18,14 @@
  */
 abstract class Creator {
   /**
+   * Method to create the diferent products.
    * Note that the Creator may also provide some default implementation of the
    * factory method.
    */
   public abstract factoryMethod(): Product;
 
   /**
+   * Example of an operation
    * The Creator's primary responsibility is not creating products. Usually, it
    * contains some core business logic that relies on Product objects, returned
    * by the factory method. Subclasses can indirectly change that business
@@ -47,6 +49,7 @@ abstract class Creator {
 */
 class ConcreteCreator1 extends Creator {
   /**
+   * Method to create a new concrete product.
    * Note that the signature of the method still uses the abstract product
    * type, even though the concrete product is actually returned from the
    * method. This way the Creator can stay independent of concrete product
@@ -64,7 +67,7 @@ class ConcreteCreator1 extends Creator {
  */
 class ConcreteCreator2 extends Creator {
   /**
-   * 
+   * Method to create a new concrete product.
    * @return {Product} A new instance of a Product object.
    */
   public factoryMethod(): Product {
