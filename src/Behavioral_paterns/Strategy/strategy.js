@@ -8,7 +8,7 @@
  * @author Airam Rafael Luque Leon
  * @since Apr 07 2022
  * @desc This program exemplifies the strategy pattern for a shipping
- * 
+ *
  * @see {@link https://github.com/PacktPublishing/TypeScript-4-Design-Patterns-and-Best-Practices/blob/main/chapters/chapter-5_Behavioral_Design_Patterns/Strategy.ts}
  * @see {@link https://github.com/ULL-ESIT-PAI-2021-2022/2021-2022-pai-design-patterns-pai-design-patterns}
  */
@@ -23,7 +23,7 @@ class ConcreteBillingStrategyA {
    * This function logs on the terminal that it is using the first strategy
    */
   calculate() {
-    console.log("Calculating bill using first strategy");
+    console.log('Calculating bill using first strategy');
   }
 }
 
@@ -35,7 +35,7 @@ class ConcreteBillingStrategyB {
    * This function logs on the terminal that it is using the second strategy
    */
   calculate() {
-    console.log("Calculating bill using second strategy");
+    console.log('Calculating bill using second strategy');
   }
 }
 
@@ -45,7 +45,7 @@ class ConcreteBillingStrategyB {
 class BillingContext {
   /**
    * Receives an object of a class strategy
-   * @param {object} strategy 
+   * @param {object} strategy
    */
   constructor(strategy) {
     this.strategy = strategy;
@@ -53,7 +53,7 @@ class BillingContext {
 
   /**
    * Sets the strategy that it's been used
-   * @param {object} strategy 
+   * @param {object} strategy
    */
   setStrategy(strategy) {
     this.strategy = strategy;

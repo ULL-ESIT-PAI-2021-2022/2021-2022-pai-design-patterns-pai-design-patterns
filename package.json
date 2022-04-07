@@ -1,0 +1,38 @@
+{
+  "name": "pai_design_patterns",
+  "version": "1.0.0",
+  "description": "PAI Design Patterns",
+  "devDependencies": {
+    "@babel/core": "^7.17.4",
+    "@exercism/eslint-config-javascript": "^0.6.0",
+    "@types/jest": "^27.4.1",
+    "@types/node": "^16.11.25",
+    "@typescript-eslint/eslint-plugin": "^5.18.0",
+    "@typescript-eslint/parser": "^5.18.0",
+    "babel-jest": "^27.5.1",
+    "core-js": "^3.21.1",
+    "eslint": "^8.12.0",
+    "eslint-config-google": "^0.14.0",
+    "express": "^4.17.1",
+    "jest": "^27.5.1"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ULL-ESIT-PAI-2021-2022/2021np-2022-PAI-P07-Modules-JSON.git"
+  },
+  "keywords": [
+    "PAI",
+    "Javascript",
+    "Lab",
+    "JSON",
+    "Modules"
+  ],
+  "author": "Airam Rafael Luque León and Helena García Díaz",
+  "license": "ISC",
+  "homepage": "https://github.com/ULL-ESIT-PAI-2021-2022/2021-2022-pai-design-patterns-pai-design-patterns#readme",
+  "type": "module",
+  "dependencies": {
+    "caniuse-lite": "^1.0.30001324"
+  }
+}

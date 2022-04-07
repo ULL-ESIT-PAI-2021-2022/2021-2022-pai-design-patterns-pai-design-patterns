@@ -66,10 +66,10 @@ class Command {
 
 /**
  * This function encapsulates the add operation
- * @param {number} value 
+ * @param {number} value
  * @return {number} the value of the operation
  */
-let AddCommand = function (value) {
+let AddCommand = function(value) {
   return new Command(add, sub, value);
 };
 
