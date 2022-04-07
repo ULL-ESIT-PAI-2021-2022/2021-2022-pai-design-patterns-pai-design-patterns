@@ -31,7 +31,6 @@
   "author": "Airam Rafael Luque León and Helena García Díaz",
   "license": "ISC",
   "homepage": "https://github.com/ULL-ESIT-PAI-2021-2022/2021-2022-pai-design-patterns-pai-design-patterns#readme",
-  "type": "module",
   "dependencies": {
     "caniuse-lite": "^1.0.30001324"
   }

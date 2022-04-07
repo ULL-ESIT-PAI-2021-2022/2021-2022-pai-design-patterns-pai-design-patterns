@@ -35,22 +35,19 @@ const Factory = function() {
 };
 
 
-const FullTime = () => {
+const FullTime = function() {
   this.hourly = '$12';
 };
 
-
-const PartTime = () => {
+const PartTime = function() {
   this.hourly = '$11';
 };
 
-
-const Temporary = () => {
+const Temporary = function() {
   this.hourly = '$10';
 };
 
-
-const Contractor = () => {
+const Contractor = function() {
   this.hourly = '$15';
 };
 
