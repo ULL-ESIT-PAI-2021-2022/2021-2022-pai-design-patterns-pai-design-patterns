@@ -8,7 +8,7 @@
  * @author Airam Rafael Luque Leon
  * @since Apr 07 2022
  * @desc This program exemplifies the command pattern for a calculator
- * 
+ *
  * @see {@link https://github.com/ULL-ESIT-PAI-2021-2022/2021-2022-pai-design-patterns-pai-design-patterns}
  */
 
@@ -16,35 +16,43 @@
 
 /**
  * This function sums two numbers and returns the result
- * @param {number} number1 
- * @param {number} number2 
- * @return the sum of the two numbers
+ * @param {number} number1
+ * @param {number} number2
+ * @return {number} the sum of the two numbers
  */
-function add(number1, number2) { return number1 + number2; }
+function add(number1, number2) {
+  return number1 + number2;
+}
 
 /**
  * This function subtract two numbers and returns the result
- * @param {number} number1 
- * @param {number} number2 
- * @return the subtraction of the two numbers
+ * @param {number} number1
+ * @param {number} number2
+ * @return {number} the subtraction of the two numbers
  */
-function sub(number1, number2) { return number1 - number2; }
+function sub(number1, number2) {
+  return number1 - number2;
+}
 
 /**
  * This function multiplies two numbers and returns the result
- * @param {number} number1 
- * @param {number} number2 
- * @return the multiplication of the two numbers
+ * @param {number} number1
+ * @param {number} number2
+ * @return {number} the multiplication of the two numbers
  */
-function mul(number1, number2) { return number1 * number2; }
+function mul(number1, number2) {
+  return number1 * number2;
+}
 
 /**
  * This function divides two numbers and returns the result
- * @param {number} number1 
- * @param {number} number2 
- * @return the division of the two numbers
+ * @param {number} number1
+ * @param {number} number2
+ * @return {number} the division of the two numbers
  */
-function div(number1, number2) { return number1 / number2; }
+function div(number1, number2) {
+  return number1 / number2;
+}
 
 /**
  * Class that represents a command
@@ -52,10 +60,10 @@ function div(number1, number2) { return number1 / number2; }
 class Command {
   /**
    * Creates the command
-   * 
-   * @param {function} execute 
-   * @param {function} undo 
-   * @param {number} value 
+   *
+   * @param {function} execute
+   * @param {function} undo
+   * @param {number} value
    */
   constructor(execute, undo, value) {
     this.execute = execute;
@@ -69,34 +77,34 @@ class Command {
  * @param {number} value
  * @return {number} the value of the operation
  */
-let AddCommand = function(value) {
+const AddCommand = function(value) {
   return new Command(add, sub, value);
 };
 
 /**
  * This function encapsulates the subtract operation
- * @param {number} value 
+ * @param {number} value
  * @return {number} the value of the operation
  */
-let SubCommand = function (value) {
+const SubCommand = function(value) {
   return new Command(sub, add, value);
 };
 
 /**
  * This function encapsulates the multiplicacion operation
- * @param {number} value 
+ * @param {number} value
  * @return {number} the value of the operation
  */
-let MulCommand = function (value) {
+const MulCommand = function(value) {
   return new Command(mul, div, value);
 };
 
 /**
  * This function encapsulates the division operation
- * @param {number} value 
+ * @param {number} value
  * @return {number} the value of the operation
  */
-let DivCommand = function (value) {
+const DivCommand = function(value) {
   return new Command(div, mul, value);
 };
 
@@ -105,58 +113,58 @@ let DivCommand = function (value) {
  * operations
  * @return {number} the value of the operation
  */
-let Calculator = function () {
+const Calculator = function() {
   let current = 0;
-  let commands = [];
+  const commands = [];
 
   /**
    * This funciton receives a command function and return the name of
    * the given command
-   * @param {function} command 
+   * @param {function} command
    * @return {string} the name of the command
    */
   function action(command) {
-    let name = command.execute.toString().substr(9, 3);
+    const name = command.execute.toString().substr(9, 3);
     return name.charAt(0).toUpperCase() + name.slice(1);
   }
 
   return {
     /**
      * This function executes the given command
-     * @param {function} command 
+     * @param {function} command
      */
-    execute: function (command) {
+    execute: function(command) {
       current = command.execute(current, command.value);
       commands.push(command);
-      console.log(action(command) + ": " + command.value);
+      console.log(action(command) + ': ' + command.value);
     },
 
     /**
      * This funciton pops the last command and
      * executes the reverse action
      */
-    undo: function () {
-      let command = commands.pop();
+    undo: function() {
+      const command = commands.pop();
       current = command.undo(current, command.value);
-      console.log("Undo " + action(command) + ": " + command.value);
+      console.log('Undo ' + action(command) + ': ' + command.value);
     },
 
     /**
      * This function return the current value on the calculator
      * @return {number} the current value
      */
-    getCurrentValue: function () {
+    getCurrentValue: function() {
       return current;
-    }
-  }
-}
+    },
+  };
+};
 
 /**
  * This function creates a new calculator, executes a few commands, undo the
  * last two and tells the current value on the calculator
  */
 function run() {
-  let calculator = new Calculator();
+  const calculator = new Calculator();
 
   calculator.execute(new AddCommand(100));
   calculator.execute(new SubCommand(24));
@@ -166,7 +174,7 @@ function run() {
   calculator.undo();
   calculator.undo();
 
-  console.log("\nValue: " + calculator.getCurrentValue());
+  console.log('\nValue: ' + calculator.getCurrentValue());
 }
 
 run();

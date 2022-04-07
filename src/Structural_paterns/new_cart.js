@@ -8,7 +8,7 @@
  * @author Airam Rafael Luque Leon
  * @since Apr 07 2022
  * @desc This program emulates the new code of a cart service for a web
- * 
+ *
  * @see {@link https://github.com/ULL-ESIT-PAI-2021-2022/2021-2022-pai-design-patterns-pai-design-patterns}
  */
 
@@ -20,8 +20,8 @@
 class Cart {
   /**
    * Adds two numbers and return the result
-   * @param {number} price 
-   * @param {number} item 
+   * @param {number} price
+   * @param {number} item
    * @return {number} the result
    */
   add(price, item) {
@@ -30,8 +30,8 @@ class Cart {
 
   /**
    * Divides two numbers and return the result
-   * @param {number} price 
-   * @param {number} item 
+   * @param {number} price
+   * @param {number} item
    * @return {number} the result
    */
   div(price, item) {
@@ -40,8 +40,8 @@ class Cart {
 
   /**
    * Multiplies two numbers and return the result
-   * @param {number} price 
-   * @param {number} item 
+   * @param {number} price
+   * @param {number} item
    * @return {number} the result
    */
   mult(price, item) {

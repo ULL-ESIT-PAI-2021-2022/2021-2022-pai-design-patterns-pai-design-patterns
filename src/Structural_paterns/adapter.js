@@ -7,8 +7,9 @@
  * @author Helena Garcia Diaz
  * @author Airam Rafael Luque Leon
  * @since Apr 07 2022
- * @desc This class is an adapter so the new code for the cart can be use as the old one
- * 
+ * @desc This class is an adapter so the new code for the cart can be use as
+ * the old one
+ *
  * @see {@link https://github.com/ULL-ESIT-PAI-2021-2022/2021-2022-pai-design-patterns-pai-design-patterns}
  */
 
@@ -29,13 +30,13 @@ class CartAdapter {
 
   /**
    * Calculates the operation given with the two numbers
-   * @param {number} price 
-   * @param {number} item 
-   * @param {string} operation 
+   * @param {number} price
+   * @param {number} item
+   * @param {string} operation
    * @return {number} the result of the operation
    */
   operation(price, item, operation) {
-    switch(operation) {
+    switch (operation) {
       case 'add':
         return this.cart.add(price, item);
       case 'multiplication':
