@@ -69,7 +69,7 @@ class Command {
  * @param {number} value 
  * @return {number} the value of the operation
  */
-var AddCommand = function (value) {
+let AddCommand = function (value) {
   return new Command(add, sub, value);
 };
 
@@ -78,7 +78,7 @@ var AddCommand = function (value) {
  * @param {number} value 
  * @return {number} the value of the operation
  */
-var SubCommand = function (value) {
+let SubCommand = function (value) {
   return new Command(sub, add, value);
 };
 
@@ -87,7 +87,7 @@ var SubCommand = function (value) {
  * @param {number} value 
  * @return {number} the value of the operation
  */
-var MulCommand = function (value) {
+let MulCommand = function (value) {
   return new Command(mul, div, value);
 };
 
@@ -96,7 +96,7 @@ var MulCommand = function (value) {
  * @param {number} value 
  * @return {number} the value of the operation
  */
-var DivCommand = function (value) {
+let DivCommand = function (value) {
   return new Command(div, mul, value);
 };
 
@@ -105,9 +105,9 @@ var DivCommand = function (value) {
  * operations
  * @return {number} the value of the operation
  */
-var Calculator = function () {
-  var current = 0;
-  var commands = [];
+let Calculator = function () {
+  let current = 0;
+  let commands = [];
 
   /**
    * This funciton receives a command function and return the name of
@@ -116,7 +116,7 @@ var Calculator = function () {
    * @return {string} the name of the command
    */
   function action(command) {
-    var name = command.execute.toString().substr(9, 3);
+    let name = command.execute.toString().substr(9, 3);
     return name.charAt(0).toUpperCase() + name.slice(1);
   }
 
@@ -136,7 +136,7 @@ var Calculator = function () {
      * executes the reverse action
      */
     undo: function () {
-      var command = commands.pop();
+      let command = commands.pop();
       current = command.undo(current, command.value);
       console.log("Undo " + action(command) + ": " + command.value);
     },
@@ -156,7 +156,7 @@ var Calculator = function () {
  * last two and tells the current value on the calculator
  */
 function run() {
-  var calculator = new Calculator();
+  let calculator = new Calculator();
 
   calculator.execute(new AddCommand(100));
   calculator.execute(new SubCommand(24));
