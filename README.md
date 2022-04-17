@@ -3,15 +3,25 @@
 This directory is organised as follows:
 
       .
-      ├── bib          # Presentation bibliography and references
-      ├── slides       # slides of your presentation (PDF is the preferred format)
-      ├── tests        # Source code for tests
-      ├── src          # Source code (add subdirectories if necessary) 
+      ├── bib
+      ├── slides
+      ├── src           
+      ├── Behavioral_paterns
+      │   ├── Command
+      │   │   └── command.js
+      │   └── Strategy
+      │       └── strategy.js
+      ├── Creational_patterns
+      │   ├── Factory_Method
+      │   │   ├── factory-method.js
+      │   │   └── factory-method2.ts
+      │   └── Singleton
+      │       ├── singleton.js
+      │       └── singleton2.ts
+      └── Structural_paterns
+          ├── adapter.js
+          ├── new_cart.js
+          ├── original_cart.js
+          ├── use_of_new_code.js
+          └── use_of_original_code.js
       
-When you receive the link to this repository, clone it and use it to host all the material for the work to be done: slides, code samples, etc.
-
-Upload the link to this public repository to the class assignment. This is required for the evaluation of the work.
-
-Post the link to the repository in the PAI forum before the presentation date of the work, so that all students have access to the material in the exposition session.
-
-Remove from the repository those directories that are not necessary for your work.
