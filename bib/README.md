@@ -19,3 +19,7 @@
 - [Example of singleton](https://www.dofactory.com/javascript/design-patterns/singleton)
 
 - [Example of Factory method](https://www.dofactory.com/javascript/design-patterns/factory-method)
+
+- [Factory Method UML Diagram](https://commons.wikimedia.org/wikiFile:Factory_Method_UML_class_diagram.svg)
+
+- [Singleton UML Diagram](https://www.simogrima.com/php/php-design-pattern-singleton/)
