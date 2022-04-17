@@ -54,13 +54,9 @@ function div(number1, number2) {
   return number1 / number2;
 }
 
-/**
- * Class that represents a command
- */
+/** Class that represents a command */
 class Command {
-  /**
-   * Creates the command
-   *
+  /** Creates the command
    * @param {function} execute
    * @param {function} undo
    * @param {number} value

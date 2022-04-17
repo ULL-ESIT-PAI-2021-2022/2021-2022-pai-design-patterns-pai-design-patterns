@@ -5,6 +5,7 @@
  * Programación de Aplicaciones Interactivas
  *
  * @author Airam Rafael Luque León
+ * @author Helena Garcia Diaz
  * @since April 01 2021
  * @desc This program implements basic example of the singleton pattern in
  * JavaScript.
