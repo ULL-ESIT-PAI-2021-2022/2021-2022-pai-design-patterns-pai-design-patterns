@@ -8,7 +8,6 @@
  * @author Airam Rafael Luque Leon
  * @since Apr 07 2022
  * @desc This program exemplifies the command pattern for a calculator
- *
  * @see {@link https://github.com/ULL-ESIT-PAI-2021-2022/2021-2022-pai-design-patterns-pai-design-patterns}
  */
 
@@ -20,7 +19,7 @@
  * @param {number} number2
  * @return {number} the sum of the two numbers
  */
-function add(number1, number2) {
+function addition(number1, number2) {
   return number1 + number2;
 }
 
@@ -30,7 +29,7 @@ function add(number1, number2) {
  * @param {number} number2
  * @return {number} the subtraction of the two numbers
  */
-function sub(number1, number2) {
+function substraction(number1, number2) {
   return number1 - number2;
 }
 
@@ -40,7 +39,7 @@ function sub(number1, number2) {
  * @param {number} number2
  * @return {number} the multiplication of the two numbers
  */
-function mul(number1, number2) {
+function multiplication(number1, number2) {
   return number1 * number2;
 }
 
@@ -50,7 +49,7 @@ function mul(number1, number2) {
  * @param {number} number2
  * @return {number} the division of the two numbers
  */
-function div(number1, number2) {
+function division(number1, number2) {
   return number1 / number2;
 }
 
@@ -69,12 +68,12 @@ class Command {
 }
 
 /**
- * This function encapsulates the add operation
+ * This function encapsulates the Addition operation
  * @param {number} value
  * @return {number} the value of the operation
  */
-const AddCommand = function(value) {
-  return new Command(add, sub, value);
+const AdditionCommand = function(value) {
+  return new Command(addition, substraction, value);
 };
 
 /**
@@ -82,8 +81,8 @@ const AddCommand = function(value) {
  * @param {number} value
  * @return {number} the value of the operation
  */
-const SubCommand = function(value) {
-  return new Command(sub, add, value);
+const SubstractionCommand = function(value) {
+  return new Command(substraction, addition, value);
 };
 
 /**
@@ -91,8 +90,8 @@ const SubCommand = function(value) {
  * @param {number} value
  * @return {number} the value of the operation
  */
-const MulCommand = function(value) {
-  return new Command(mul, div, value);
+const MultiplicationCommand = function(value) {
+  return new Command(multiplication, division, value);
 };
 
 /**
@@ -100,8 +99,8 @@ const MulCommand = function(value) {
  * @param {number} value
  * @return {number} the value of the operation
  */
-const DivCommand = function(value) {
-  return new Command(div, mul, value);
+const DivisionCommand = function(value) {
+  return new Command(division, multiplication, value);
 };
 
 /**
@@ -162,10 +161,10 @@ const Calculator = function() {
 function run() {
   const calculator = new Calculator();
 
-  calculator.execute(new AddCommand(100));
-  calculator.execute(new SubCommand(24));
-  calculator.execute(new MulCommand(6));
-  calculator.execute(new DivCommand(2));
+  calculator.execute(new AdditionCommand(100));
+  calculator.execute(new SubstractionCommand(24));
+  calculator.execute(new MultiplicationCommand(6));
+  calculator.execute(new DivisionCommand(2));
 
   calculator.undo();
   calculator.undo();

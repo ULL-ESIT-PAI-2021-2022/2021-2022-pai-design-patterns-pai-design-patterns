@@ -8,40 +8,29 @@
  * @author Airam Rafael Luque Leon
  * @since Apr 07 2022
  * @desc This program exemplifies the strategy pattern for a shipping
- *
  * @see {@link https://github.com/PacktPublishing/TypeScript-4-Design-Patterns-and-Best-Practices/blob/main/chapters/chapter-5_Behavioral_Design_Patterns/Strategy.ts}
  * @see {@link https://github.com/ULL-ESIT-PAI-2021-2022/2021-2022-pai-design-patterns-pai-design-patterns}
  */
 
 'use strict';
 
-/**
- * Class that represents the strategy A
- */
+/** Class that represents the strategy A */
 class ConcreteBillingStrategyA {
-  /**
-   * This function logs on the terminal that it is using the first strategy
-   */
+  /** This function logs on the terminal that it is using the first strategy */
   calculate() {
     console.log('Calculating bill using first strategy');
   }
 }
 
-/**
- * Class that represents the strategy B
- */
+/** Class that represents the strategy B */
 class ConcreteBillingStrategyB {
-  /**
-   * This function logs on the terminal that it is using the second strategy
-   */
+  /** This function logs on the terminal that it is using the second strategy */
   calculate() {
     console.log('Calculating bill using second strategy');
   }
 }
 
-/**
- * Class that give context to the strategys
- */
+/** Class that give context to the strategys */
 class BillingContext {
   /**
    * Receives an object of a class strategy
@@ -59,17 +48,13 @@ class BillingContext {
     this.strategy = strategy;
   }
 
-  /**
-   * Calculates the bills given the set strategy
-   */
+  /** Calculates the bills given the set strategy */
   calculateBill() {
     this.strategy.calculate();
   }
 }
 
-/**
- * This function exemplifies the use of the strategy pattern
- */
+/** This function exemplifies the use of the strategy pattern */
 function run() {
   const strategyA = new ConcreteBillingStrategyA();
   const strategyB = new ConcreteBillingStrategyB();

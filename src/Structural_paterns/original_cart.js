@@ -8,15 +8,12 @@
  * @author Airam Rafael Luque Leon
  * @since Apr 07 2022
  * @desc This program emulates the original code of a cart service for a web
- *
  * @see {@link https://github.com/ULL-ESIT-PAI-2021-2022/2021-2022-pai-design-patterns-pai-design-patterns}
  */
 
 'use strict';
 
-/**
- * The original cart class
- */
+/** The original cart class */
 class Cart {
   /**
    * Given two numbers and an operation, returns the result of the given

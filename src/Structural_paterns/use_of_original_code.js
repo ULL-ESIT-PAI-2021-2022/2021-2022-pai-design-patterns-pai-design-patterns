@@ -9,17 +9,14 @@
  * @since Apr 07 2022
  * @desc This program emulates the use of the original code of a cart service
  *       for a web
- *
  * @see {@link https://github.com/ULL-ESIT-PAI-2021-2022/2021-2022-pai-design-patterns-pai-design-patterns}
  */
 
 'use strict';
 
-import Cart from 'original_code';
+import Cart from './original_cart';
 
-/**
- * This function exemplifies the use of the adapter pattern
- */
+/** This function exemplifies the use of the adapter pattern */
 function main() {
   const myCart = new Cart();
   const multiplication = myCart.operation(1, 2, 'multiplication');
