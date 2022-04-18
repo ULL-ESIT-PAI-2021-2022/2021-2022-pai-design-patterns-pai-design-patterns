@@ -14,7 +14,7 @@
 
 'use strict';
 
-import Cart from 'new_code.js';
+import Cart from './new_cart.js';
 
 /** The Adapter class */
 class CartAdapter {
